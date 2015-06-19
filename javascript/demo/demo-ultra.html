@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div id="display">
+	
+</div>
+</body>
+</html>
+<script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../sambaa-device.js"></script>
+<script type="text/javascript">
+//Application Type
+config.app_type = 'ultra';
+//Put your developer key here
+config.developer_key = '';
+//Put your application key here
+config.application_key = '';
+
+//Example 1 - Getting a value
+setInterval(function () {
+	console.log(sambaa.getValue());
+},1000);
+
+//Example 2 - Updating an Element
+sambaa.updateElement("#display");
+
+</script>
