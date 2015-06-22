@@ -3,7 +3,7 @@
 <head>
 	<title></title>
 </head>
-<body>
+<body> 
 <div id="display">
 	
 </div>
@@ -20,11 +20,15 @@ config.developer_key = '';
 config.application_key = '';
 
 //Example 1 - Getting a value
-setInterval(function (argument) {
-	console.log(sambaa.getValue('fan'));
+setInterval(function (e) {
+	var txt;
+	if(sambaa.getValue('fan')==0){
+		txt = 'on';
+	}else{
+		txt = 'off';
+	}
+	$('#display').html(txt);
 },1000);
 
-//Example 2 - Updating an Element
-sambaa.updateElement("#display",'ac');
 
 </script>
